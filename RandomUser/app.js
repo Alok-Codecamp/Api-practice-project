@@ -12,9 +12,10 @@ const displayUser = (users) => {
     const singleUser = document.createElement("div");
     singleUser.classList.add("col");
     console.log(user.name);
+    const name = user.name.first;
     singleUser.innerHTML = `
     
-    <div onclick="showDEtails(${user})"  class="card h-100">
+    <div onclick="showDEtails()"  class="card h-100">
       <img src="${user.picture.large}" class="card-img-top" alt="user image" />
       <div class="card-body">
         <h5  class="card-title">${user.name.title} ${user.name.first} ${
@@ -40,7 +41,7 @@ function showDEtails(names) {
   <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">${names}</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
