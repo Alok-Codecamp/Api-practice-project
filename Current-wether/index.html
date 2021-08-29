@@ -16,9 +16,18 @@
       body {
         background-image: url("images/bg-image.jpg");
       }
+      h1 {
+        color: white;
+      }
       .result-div {
-        margin: 0 34% 0 34%;
-        padding: 0 0% 0 10;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      #weather-details {
+        margin: 0 0 0 42%;
       }
     </style>
   </head>
@@ -26,6 +35,7 @@
     <header>
       <div class="input-group mb-3 mt-5 mx-auto w-50">
         <input
+          id="search-input"
           type="text"
           class="form-control"
           placeholder="Search your city wether"
@@ -33,6 +43,7 @@
           aria-describedby="button-addon2"
         />
         <button
+          onclick="loadWetherData()"
           class="btn btn-outline-secondary btn-danger text-light"
           type="button"
           id="button-addon2"
@@ -40,10 +51,15 @@
           Button
         </button>
       </div>
+
       <div id="result" class="result-div">
-        <img src="" alt="" />
-        <p class="text-light">hi iam result</p>
+        <p class="text-light">Current weather of your city</p>
       </div>
+      <br /><br />
+      <div class="text-light" id="weather-details"></div>
     </header>
+
+    <script src="app.js"></script>
   </body>
 </html>
+<!-- <img src="images/wether-condition/Hail.gif" alt=""> -->
